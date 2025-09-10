@@ -1,5 +1,10 @@
 = From Playground to Prototype - Building Your Agent in OpenShift AI
 
+[NOTE]
+====
+Persona: AI Engineer (primary). Also relevant: Data Scientist.
+====
+
 [IMPORTANT]
 .In this lab
 ====

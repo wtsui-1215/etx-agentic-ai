@@ -1,5 +1,10 @@
 = From Prototype to App: Deploying the Agent as a Service
 
+[NOTE]
+====
+Persona: Platform Engineer (primary). Also relevant: AI Engineer.
+====
+
 [IMPORTANT]
 .In this lab
 ====
@@ -33,7 +38,7 @@ Estimated time: 60–90 minutes
 [source,bash,options="wrap",role="execute"]
 ----
 oc get ns ai-agent
-oc -n ai-agent get deploy,svc,route,cm,sa,rb,secret
+oc -n ai-agent get deploy,svc,route,cm,sa,rolebinding,secret
 ----
 
 * If resources are missing, ensure your GitOps/App-of-Apps includes the tenant. Then sync in Argo CD.
@@ -173,7 +178,7 @@ To simulate a build failure and test the agent integration, use the pre-configur
 
 *Option 1: Web Console*
 
-1. In the OpenShift Web Console, navigate to **Pipelines** in the `ai-agent` namespace.
+1. In the OpenShift Web Console, navigate to **Pipelines** in the `demo-pipeline` namespace.
 2. Click on the `agent-service-build` pipeline.
 3. Click **Start** to create a new PipelineRun.
 4. In the parameters, set the `GIT_REVISION` value to `bad` to use the intentionally broken revision.
@@ -196,12 +201,12 @@ Start a one-off PipelineRun with the `bad` ref:
 
 [source,bash,options="wrap",role="execute"]
 ----
-oc -n ai-agent create -f - <<'EOF'
+oc -n demo-pipeline create -f - <<'EOF'
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
   generateName: agent-service-build-run-bad-
-  namespace: ai-agent
+  namespace: demo-pipieline
 spec:
   taskRunTemplate:
     serviceAccountName: pipeline

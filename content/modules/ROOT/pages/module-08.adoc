@@ -2,6 +2,11 @@
 
 [NOTE]
 ====
+Persona: SRE/Platform Engineer (primary). Also relevant: AI Engineer.
+====
+
+[NOTE]
+====
 Estimated time: 45–60 minutes (Optional)
 ====
 

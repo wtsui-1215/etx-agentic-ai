@@ -1,5 +1,10 @@
 = Evaluation and Observability
 
+[NOTE]
+====
+Persona: AI Engineer (primary). Also relevant: SRE/Platform Engineer.
+====
+
 [IMPORTANT]
 .In this module
 ====

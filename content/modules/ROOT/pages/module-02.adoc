@@ -1,5 +1,10 @@
 = Initial Exploration
 
+[NOTE]
+====
+Persona: Data Scientist (primary). Also relevant: AI Engineer.
+====
+
 [IMPORTANT]
 .In this module
 ====
@@ -16,7 +21,7 @@ Estimated time: 20–30 minutes
 * Use Console Links to navigate
 * Create a GPU-enabled Workbench
 * Clone the lab repo into your Workbench
-* Open and run the getting started notebook
+* Open and run the getting started notebook as a data scientist
 
 == Getting Started
 
@@ -67,7 +72,12 @@ image::clone-code2.png[Clone Code, 600]
 +
 https://github.com/redhat-ai-services/etx-agentic-ai/blob/main/code/getting-started.ipynb[etx-agentic-ai/code/getting-started.ipynb,window=_blank]
 +
-In this notebook we will help you get started with LLamaStack.
+
+[NOTE]
+====
+The `getting-started.ipynb` notebook will be empty at this stage. We're including it here to demonstrate how a data scientist would typically interact with the repository and set up their environment. In later modules, you'll use this notebook as a starting point for building and testing your own agents.
+====
+
 
 
 // lightbox - for images - FIXME need to make the include::partial$lightbox.hbs WORK
