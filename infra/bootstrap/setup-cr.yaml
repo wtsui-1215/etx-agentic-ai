@@ -108,7 +108,7 @@ data:
         args: ["helm dependency build"]
       generate:
         command: ["bash", "-c"]
-        args: ['helm template "$ARGOCD_APP_NAME" -n "$ARGOCD_APP_NAMESPACE" -f <(echo "$ARGOCD_ENV_HELM_VALUES") . | argocd-vault-plugin generate -s openshift-policy:team-avp-credentials -']
+        args: ['helm template "$ARGOCD_APP_NAME" -n "$ARGOCD_APP_NAMESPACE" $ARGOCD_ENV_HELM_ARGS . | argocd-vault-plugin generate -s openshift-policy:team-avp-credentials -']
   kustomize-plugin.yaml: |
     apiVersion: argoproj.io/v1alpha1
     kind: ConfigManagementPlugin
